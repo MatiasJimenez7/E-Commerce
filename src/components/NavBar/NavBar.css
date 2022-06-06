@@ -13,3 +13,8 @@
     justify-content: space-around;
     background-color: beige;
 }
+.carrito {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
