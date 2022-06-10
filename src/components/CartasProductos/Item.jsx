@@ -1,17 +1,16 @@
 import React from "react";
 import "./Item.css"
 
-function Item () {
+function Item ({nombre,precio,img}) {
+
     return(
-
-    
-    <section className="mayor">
+    <div className="mayor">
         <div className="hola">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis aperiam illum rem! Ipsa ex tempora rerum magni, ipsam nobis hic debitis perspiciatis aliquid dolores magnam distinctio ea, expedita itaque sequi.</p>
+            <img src={img} alt="image" />
+            <h3>{nombre}</h3>
+            <h3>${precio}</h3>
         </div>
-        
-
-    </section>
+    </div>
     )
 }
 
