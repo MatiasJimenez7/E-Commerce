@@ -30,7 +30,7 @@ export default function ItemCount ({initial,stock}) {
                 <button className="botoncarrito" onClick={restar}>-</button>
             </div>
             <div className="botoncarr">
-                <button>Agregar al Carrito</button>
+                <button>Add To Cart</button>
             </div>
 
             

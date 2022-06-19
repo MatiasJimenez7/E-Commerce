@@ -5,7 +5,7 @@ import "./ItemList.css"
 
 
 
-export default function ItemList () {
+export default function ItemListContenedor ()  {
 
     const [pelotas, setPelotas] = useState([])
 

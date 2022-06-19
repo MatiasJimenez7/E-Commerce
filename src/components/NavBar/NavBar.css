@@ -1,6 +1,9 @@
 body {
     margin: 0;
 }
+@media (min-width: 768px) {
+     
+
 .navbar-mayor a {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -38,4 +41,46 @@ body {
 .copa img {
     width: 100%;
     height: 100%;
+}
+}
+
+@media (max-width: 768px) {
+    .navbar-mayor a {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        font-family:'Saira Stencil One', cursive;
+        font-size: 1rem;
+        color: white;
+        text-transform: uppercase;
+    }
+    
+    .navbar-mayor {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gg {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../../img/champsss.jpg);
+    }
+    .carro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gg a {
+        display: flex;
+        justify-content: center;
+    }
+    .copa {
+        display: flex;
+        justify-content: center;
+    
+    }
+    .copa img {
+        width: 20%;
+        height: 20%;
+    }
 }

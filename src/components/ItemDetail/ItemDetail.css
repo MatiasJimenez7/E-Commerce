@@ -1,0 +1,106 @@
+@media (min-width: 768px) {
+     
+
+.holadetail {
+    text-align: center;
+    margin-top: 3rem;
+
+    
+}
+
+
+.mayordetail {
+    margin-left: 10rem;
+    
+    display: flex;
+    width: 100%;
+    gap: 10rem;
+}
+.mayordetail:hover  {
+    transform: none;
+    box-shadow: none;
+    cursor: default;
+}
+.cajadetalle {
+    text-align: center;
+    margin-top: 2rem;
+    
+}
+.cajadetalle p {
+    width: 20rem;
+    text-align: center;
+}
+.botoncarr button {
+    margin-top: 1rem;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    cursor: pointer;
+}
+.botoncarrito button {
+    margin: 20px;
+    background-color: black;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.botoncarrito span {
+    font-size: 2rem;
+}
+.cajadetalle h3 {
+    font-size: 2rem;
+}
+}
+@media (max-width: 768px ) {
+    .holadetail {
+        text-align: center;
+        margin-top: 3rem;
+        
+    }
+    
+    .mayordetail {
+        margin-left: 2rem;
+        border-radius: 2rem;
+        
+    }
+    .mayordetail:hover  {
+        transform: none;
+        box-shadow: none;
+        cursor: default;
+    }
+    .cajadetalle {
+        text-align: center;
+        margin-bottom: 1rem;
+        
+    }
+    .cajadetalle p {
+        margin: auto 20px;
+        text-align: center;
+    }
+    .botoncarr button {
+        margin-top: 1rem;
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.9rem;
+        cursor: pointer;
+    }
+    .botoncarrito button {
+        margin: 20px;
+        background-color: black;
+        color: white;
+        padding: 0.6rem;
+        border-radius: 2rem;
+        cursor: pointer;
+    }
+    .botoncarrito span {
+        font-size: 2rem;
+    }
+    .cajadetalle h3 {
+        font-size: 2rem;
+    }
+}

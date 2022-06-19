@@ -1,20 +1,25 @@
 
 import NavBar from "./components/NavBar/NavBar"
-import ItemListConteiner from "./components/ItemListConteiner"
 import ItemCount from "./components/AgregarAlCarrito/ItemCount"
 import Item from "./components/CartasProductos/Item";
-import ItemList from "./components/ItemList/ItemList";
+import ItemListContenedor from "./components/ItemList/ItemListContenedor"
+import {BrowserRouter, Route, Routes} from "react-router-dom" 
+import ItemDetailConteiner from "./components/ItemDetail/ItemDetailConteiner";
 
 
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <NavBar/>
-      
-      {/* <ItemCount stock={10} initial={1}/>  */}
-      
-      <ItemList/>
+      <Routes>
+        <Route path="/" element={<ItemListContenedor/>}/>
+        <Route path="/balls/:id" element={<ItemDetailConteiner/>}/>
+      </Routes>
+
+
+      </BrowserRouter>
       
       
     </div>
