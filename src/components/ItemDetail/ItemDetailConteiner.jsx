@@ -9,13 +9,12 @@ export default function ItemDetailConteiner () {
 
     const [pelota, setPelota] = useState({})
 
-    const {id} = useParams();
+    const {itemid} = useParams();
 
-    
     useEffect(()=>{
         getProducts().then(
             pelota=>{
-                setPelota(pelota[id])
+                setPelota(pelota[itemid])
                 console.log(pelota)
             }
         )
@@ -26,14 +25,7 @@ export default function ItemDetailConteiner () {
 
     return (
         <div>
-            
-            
             <ItemDetail nombre={pelota.nombre} precio={pelota.precio} img={pelota.img}/>
-          
         </div>
-
-
-
-
     )
 }    

@@ -27,7 +27,7 @@ export default function ItemListContenedor ()  {
             {
                 pelotas.map(elem=>
                 
-                  <Item nombre={elem.nombre} precio={elem.precio} img={elem.img}/>
+                  <Item id={elem.id} nombre={elem.nombre} precio={elem.precio} img={elem.img}/>
                 )
             }
         </div>

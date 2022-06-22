@@ -18,10 +18,7 @@ export default function ItemCount ({initial,stock}) {
         }
         
     };
-
-
-
-
+    
     return(
         <div>
             <div className="botoncarrito">

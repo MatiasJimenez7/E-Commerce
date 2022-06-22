@@ -9,7 +9,6 @@ function ItemDetail ({nombre,precio,img}) {
             <img src={img} alt="image" />
             <h3>{nombre}</h3>
             <h3>${precio}</h3>
-            
         </div>
         <div className="cajadetalle">
             <h3>{nombre}</h3>

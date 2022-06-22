@@ -14,74 +14,74 @@ import img2022 from "./img/Screenshot_11.png"
 const pelotas = [
     {
         nombre:"Champion Ball 2011",
-        precio:1500,
-        id:1,
+        precio:357.457,
+        id:0,
         img:img2011
     },
     {
         nombre:"Champion Ball 2012",
-        precio:1500,
-        id:2,
+        precio:17670,
+        id:1,
         img:img2012
     },
     {
         nombre:"Champion Ball 2013",
-        precio:1500,
-        id:3,
+        precio:99500,
+        id:2,
         img:img2013
     },
     {
         nombre:"Champion Ball 2014",
-        precio:1500,
-        id:4,
+        precio:88500,
+        id:3,
         img:img2014
     },
     {
         nombre:"Champion Ball 2015",
-        precio:1500,
-        id:5,
+        precio:77500,
+        id:4,
         img:img2015
     },
     {
         nombre:"Champion Ball 2016",
-        precio:1500,
-        id:6,
+        precio:198500,
+        id:5,
         img:img2016
     },
     {
         nombre:"Champion Ball 2017",
-        precio:1500,
-        id:7,
+        precio:113500,
+        id:6,
         img:img2017
     },
     {
         nombre:"Champion Ball 2018",
-        precio:1500,
-        id:8,
+        precio:145555,
+        id:7,
         img:img2018
     },
     {
         nombre:"Champion Ball 2019",
-        precio:1500,
-        id:9,
+        precio:10000,
+        id:8,
         img:img2019
     },
     {
         nombre:"Champion Ball 2020",
-        precio:1500,
-        id:10,
+        precio:500000,
+        id:9,
         img:img2020
     },
     {
         nombre:"Champion Ball 2021",
-        precio:1500,
-        id:11,
+        precio:800000,
+        id:10,
         img:img2021
     },
     {
         nombre:"Champion Ball 2022",
-        precio:1500,
-        id:12,
+        precio:1000000,
+        id:11,
         img:img2022
     }
 ]
@@ -94,3 +94,4 @@ export const getProducts = () => {
         }, 600)
     })
 }
+
