@@ -22,7 +22,7 @@
 
 .mayor {
     width: 50%;
-    border: 1px solid gray;
+    border: 1px solid rgb(0, 0, 0);
     background-color: white;
     border-radius: 1rem;
     margin-top: 4rem;

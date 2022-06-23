@@ -9,80 +9,102 @@ import img2018 from "./img/2018.jpg"
 import img2019 from "./img/2019.jpg"
 import img2020 from "./img/2020.jpg"
 import img2021 from "./img/2021.jpg"
-import img2022 from "./img/Screenshot_11.png"
+import img2022 from "./img/Adidas 2022 Champions League Final Ball (2).jpg"
 
 const pelotas = [
     {
         nombre:"Champion Ball 2011",
         precio:357.457,
         id:0,
-        img:img2011
+        img:img2011,
+        category:"red"
     },
     {
         nombre:"Champion Ball 2012",
         precio:17670,
         id:1,
-        img:img2012
+        img:img2012,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2013",
         precio:99500,
         id:2,
-        img:img2013
+        img:img2013,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2014",
         precio:88500,
         id:3,
-        img:img2014
+        img:img2014,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2015",
         precio:77500,
         id:4,
-        img:img2015
+        img:img2015,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2016",
         precio:198500,
         id:5,
-        img:img2016
+        img:img2016,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2017",
         precio:113500,
         id:6,
-        img:img2017
+        img:img2017,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2018",
         precio:145555,
         id:7,
-        img:img2018
+        img:img2018,
+        category:"default"
+
     },
     {
         nombre:"Champion Ball 2019",
         precio:10000,
         id:8,
-        img:img2019
+        img:img2019,
+        category:"red"
+
     },
     {
         nombre:"Champion Ball 2020",
         precio:500000,
         id:9,
-        img:img2020
+        img:img2020,
+        category:"default"
     },
     {
         nombre:"Champion Ball 2021",
         precio:800000,
         id:10,
-        img:img2021
+        img:img2021,
+        category:"red"
+
     },
     {
         nombre:"Champion Ball 2022",
         precio:1000000,
         id:11,
-        img:img2022
+        img:img2022,
+        category:"default"
+
     }
 ]
 
@@ -91,6 +113,16 @@ export const getProducts = () => {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(pelotas)
+        }, 600)
+    })
+}
+
+export const ballsReds = () => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(pelotas.filter(elem=>
+                elem.category==="red"
+            ))
         }, 600)
     })
 }
