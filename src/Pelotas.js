@@ -11,6 +11,10 @@ import img2020 from "./img/2020.jpg"
 import img2021 from "./img/2021.jpg"
 import img2022 from "./img/Screenshot_11.png"
 
+
+
+
+
 const pelotas = [
     {
         nombre:"Champion Ball 2011",

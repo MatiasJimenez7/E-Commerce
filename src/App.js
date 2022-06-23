@@ -8,6 +8,8 @@ import ItemDetailConteiner from "./components/ItemDetail/ItemDetailConteiner";
 
 
 
+
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContenedor/>}/>
         <Route path="/balls/:itemid" element={<ItemDetailConteiner/>}/>
+        
       </Routes>
 
 

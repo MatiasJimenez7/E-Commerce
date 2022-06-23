@@ -11,8 +11,8 @@ function NavBar () {
             <div className="copa"><img src={img} alt="" /></div>
             <nav className="navbar-mayor">
                 <NavLink to="/">Home</NavLink>
+                <NavLink to="">Category</NavLink>
                 <NavLink to="">Information</NavLink>
-                <NavLink to="">us</NavLink>
             </nav>    
             <div className="carro">
                 <CartWidgets/>
