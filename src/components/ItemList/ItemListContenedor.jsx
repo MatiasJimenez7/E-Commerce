@@ -14,7 +14,6 @@ export default function ItemListContenedor ()  {
         getProducts().then(
             datos=>{
                 setPelotas(datos)
-                console.log(pelotas)
             }
         )
 
@@ -26,7 +25,6 @@ export default function ItemListContenedor ()  {
         <div className="gigante">
             {
                 pelotas.map(elem=>
-                
                   <Item id={elem.id} nombre={elem.nombre} precio={elem.precio} img={elem.img}/>
                 )
             }

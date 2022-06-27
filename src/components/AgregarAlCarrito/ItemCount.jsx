@@ -3,7 +3,8 @@ import "./ItemCount.css"
 
 
 
-export default function ItemCount ({initial,stock}) {
+
+export default function ItemCount ({initial,stock, onAdd}) {
     const [contador, setContador] = useState(initial)
 
     const sumar = () => {
@@ -18,6 +19,8 @@ export default function ItemCount ({initial,stock}) {
         }
         
     };
+
+    
     
     return(
         <div>
@@ -27,7 +30,7 @@ export default function ItemCount ({initial,stock}) {
                 <button className="botoncarrito" onClick={restar}>-</button>
             </div>
             <div className="botoncarr">
-                <button>Add To Cart</button>
+                <button onClick={onAdd}>Add To Cart</button>
             </div>
 
             
