@@ -1,0 +1,64 @@
+.contenedorPelotas {
+    border: 1px solid rgb(122, 122, 122);
+    width: auto;
+    height: 22rem;
+    text-align: center;
+    
+    
+}
+.contenedorPelotas img {
+    width: auto;
+    height: 7rem;
+
+}
+.contenedorPelotas p {
+    color: black;
+    font-weight: 700;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+    margin: auto 20px;
+    margin-top: 3rem;
+}
+.botondelcarrito {
+    text-align: center;
+    margin-top: 2rem;
+
+}
+.botondelcarrito button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.svgclear svg:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contenedorPelotas {
+        border: 1px solid rgb(122, 122, 122);
+        width: 23rem;
+        height: 22rem;
+        text-align: center;
+        
+        
+    }
+    .contenedorPelotas p {
+        color: black;
+        font-weight: 700;
+    }
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr);
+        gap: 3rem;
+        margin-top: 3rem;
+        margin: auto 20px;
+        margin-top: 3rem;
+    }
+}

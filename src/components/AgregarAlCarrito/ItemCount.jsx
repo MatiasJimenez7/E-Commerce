@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import "./ItemCount.css"
+import { useCart } from "../../Context/Context";
 
 
+export default function ItemCount ({initial, stock, nombre, precio, img}) {
 
+    const {cartBalls,setCartBalls, setCount} = useCart()
 
-export default function ItemCount ({initial,stock, onAdd}) {
     const [contador, setContador] = useState(initial)
 
     const sumar = () => {
@@ -19,8 +21,34 @@ export default function ItemCount ({initial,stock, onAdd}) {
         }
         
     };
-
     
+    
+    const isInCart = (pelotaAgregada) => {
+        if(cartBalls.find(elem => elem.nombre === pelotaAgregada)) {
+            return true
+        } else {
+            return false
+        }
+    
+    } 
+    
+    const nuevoItem = () => {
+        setCount(true)
+        if(isInCart(nombre)) {
+            cartBalls.map(elem => {
+                if(elem.nombre == nombre) {
+                    return elem.contador = elem.contador + contador
+                }
+            })
+        } else {
+            setCartBalls([...cartBalls, {
+                nombre: nombre,
+                precio: precio,
+                img : img,
+                contador: contador
+            }])
+        }
+    }
     
     return(
         <div>
@@ -30,7 +58,7 @@ export default function ItemCount ({initial,stock, onAdd}) {
                 <button className="botoncarrito" onClick={restar}>-</button>
             </div>
             <div className="botoncarr">
-                <button onClick={onAdd}>Add To Cart</button>
+                <button onClick={nuevoItem}>Add To Cart</button>
             </div>
 
             

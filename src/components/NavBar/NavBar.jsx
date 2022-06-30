@@ -2,10 +2,12 @@ import React from "react";
 import "./NavBar.css"
 import CartWidgets from "../CartWidegts";
 import img from "../../img/5842fe18a6515b1e0ad75b3d.png"
-import {NavLink} from "react-router-dom" 
+import {NavLink} from "react-router-dom"
+
 
 
 function NavBar () {
+    
     return (
         <div className="gg">
             <div className="copa"><img src={img} alt="" /></div>
