@@ -37,13 +37,16 @@ export default function ItemCount ({initial, stock, nombre, precio, img}) {
         if(isInCart(nombre)) {
             cartBalls.map(elem => {
                 if(elem.nombre == nombre) {
-                    return elem.contador = elem.contador + contador
+                    return (
+                        elem.contador = elem.contador + contador,
+                        elem.precio = elem.contador * precio
+                    )
                 }
             })
         } else {
             setCartBalls([...cartBalls, {
                 nombre: nombre,
-                precio: precio,
+                precio: precio * contador,
                 img : img,
                 contador: contador
             }])

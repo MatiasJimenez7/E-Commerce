@@ -1,3 +1,14 @@
+.eltotal {
+    text-align: center;
+}
+.eltotal button {
+    background-color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: 700;
+}
 .contenedorPelotas {
     border: 1px solid rgb(122, 122, 122);
     width: auto;
@@ -27,6 +38,19 @@
     text-align: center;
     margin-top: 2rem;
 
+}
+.botondelcarrito2 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 4rem;
+}
+.botondelcarrito2 button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 .botondelcarrito button {
     background-color: black;

@@ -18,14 +18,14 @@ import img2022 from "./img/Adidas 2022 Champions League Final Ball (2).jpg"
 const pelotas = [
     {
         nombre:"Champion Ball 2011",
-        precio:357.457,
+        precio:5000,
         id:0,
         img:img2011,
         category:"red"
     },
     {
         nombre:"Champion Ball 2012",
-        precio:17670,
+        precio:2500,
         id:1,
         img:img2012,
         category:"default"
@@ -33,7 +33,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2013",
-        precio:99500,
+        precio:1000,
         id:2,
         img:img2013,
         category:"default"
@@ -41,7 +41,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2014",
-        precio:88500,
+        precio:2000,
         id:3,
         img:img2014,
         category:"default"
@@ -49,7 +49,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2015",
-        precio:77500,
+        precio:3000,
         id:4,
         img:img2015,
         category:"default"
@@ -57,7 +57,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2016",
-        precio:198500,
+        precio:4000,
         id:5,
         img:img2016,
         category:"default"
@@ -65,7 +65,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2017",
-        precio:113500,
+        precio:5000,
         id:6,
         img:img2017,
         category:"default"
@@ -73,7 +73,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2018",
-        precio:145555,
+        precio:6000,
         id:7,
         img:img2018,
         category:"default"
@@ -81,7 +81,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2019",
-        precio:10000,
+        precio:7000,
         id:8,
         img:img2019,
         category:"red"
@@ -89,14 +89,14 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2020",
-        precio:500000,
+        precio:8000,
         id:9,
         img:img2020,
         category:"default"
     },
     {
         nombre:"Champion Ball 2021",
-        precio:800000,
+        precio:9000,
         id:10,
         img:img2021,
         category:"red"
@@ -104,7 +104,7 @@ const pelotas = [
     },
     {
         nombre:"Champion Ball 2022",
-        precio:1000000,
+        precio:10000,
         id:11,
         img:img2022,
         category:"default"

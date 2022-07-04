@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css"
-import CartWidgets from "../CartWidegts";
+import CartWidgets from "../CartWidgets/CartWidgets";
 import img from "../../img/5842fe18a6515b1e0ad75b3d.png"
 import {NavLink} from "react-router-dom"
 
@@ -17,7 +17,9 @@ function NavBar () {
                 <NavLink to="">Information</NavLink>
             </nav>    
             <div className="carro">
-                <CartWidgets/>
+                <NavLink to="/cart">
+                    <CartWidgets/>
+                </NavLink>
             </div>
         </div>    
         

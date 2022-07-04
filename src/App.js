@@ -8,6 +8,7 @@ import ItemDetailConteiner from "./components/ItemDetail/ItemDetailConteiner";
 import Category from "./components/category/Category"
 import Cart from "./components/carro/Cart"
 import CartProvider from "../src/Context/Context"
+import CartWidgets from "./components/CartWidgets/CartWidgets";
 
 
 
