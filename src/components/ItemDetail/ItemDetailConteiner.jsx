@@ -1,25 +1,24 @@
 import ItemDetail from "./ItemDetail"
 import React, { useState, useEffect } from 'react';
-import { getProducts } from "../../Pelotas";
 import "./ItemDetail.css"
 import "../AgregarAlCarrito/ItemCount"
 import {NavLink, useParams} from "react-router-dom"
+import {traerUnProducto} from "../../firebase/Firebase";
+
 
 export default function ItemDetailConteiner () {
 
     const [pelota, setPelota] = useState({})
 
-    const {itemid} = useParams();
+    const {itemId} = useParams();
 
     useEffect(()=>{
-        getProducts().then(
-            pelota=>{
-                setPelota(pelota[itemid])
-                console.log(pelota)
-            }
-        )
+        traerUnProducto(itemId)
+        .then((res)=>{
+            setPelota(res)
+        })
 
-    },[pelota])
+    },[itemId])
 
 
 
