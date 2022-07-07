@@ -19,8 +19,17 @@ const CartProvider = (props) => {
     const totalItems = () => cartBalls.reduce((acum, items) => acum + items.contador, 0)
     const totalPrice = () => cartBalls.reduce((acum, items) => acum + (items.precio * items.contador), 0)
 
+    const removeItem = (cartball) => {
+        const dataFiltrada = cartBalls.filter(elem => elem !== cartball)
+        setCartBalls(dataFiltrada)
+    }
+
+    const clearcarrito = () => {
+        setCartBalls([])
+    }
+
     return (
-        <CartContext.Provider value={{cartBalls, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
+        <CartContext.Provider value={{cartBalls, clearcarrito, removeItem, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
             {props.children}
         </CartContext.Provider>
     )

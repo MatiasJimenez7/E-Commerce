@@ -6,16 +6,11 @@ import "./cart.css"
 const Cart = () => {
     
     
-    const clearcarrito = () => {
-        setCartBalls([])
-    } 
+     
 
-    const {cartBalls,setCartBalls,totalItems,totalPrice} = useCart()
+    const {cartBalls,setCartBalls,totalItems,totalPrice,removeItem,clearcarrito} = useCart()
 
-    const removeItem = (cartball) => {
-        const dataFiltrada = cartBalls.filter(elem => elem !== cartball)
-        setCartBalls(dataFiltrada)
-    }
+    
 
     useEffect(()=>{
         console.log(cartBalls)

@@ -8,7 +8,7 @@ const firebaseConfig = {
     storageBucket: "coderhouse-1a11b.appspot.com",
     messagingSenderId: "633593706026",
     appId: "1:633593706026:web:4099b9ae611f106b03f553"
-};
+  };
 
 // Initialize Firebase
 const appFirebase = initializeApp(firebaseConfig);
@@ -17,9 +17,9 @@ const appFirestore = getFirestore(appFirebase)
 export async function getItems() {
 
     const itemCollection = collection(appFirestore, "Pelotas")
-    console.log(itemCollection)
-    const pelotasSnapshot = await getDocs(itemCollection).then(data=>console.log("hola",data));
-    console.log(pelotasSnapshot)
+    
+    const pelotasSnapshot = await getDocs(itemCollection)
+    
 
     let respuesta = pelotasSnapshot.docs.map( elem => {
         return{
