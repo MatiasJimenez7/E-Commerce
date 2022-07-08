@@ -14,7 +14,6 @@ function NavBar () {
             <nav className="navbar-mayor">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/category">Category</NavLink>
-                <NavLink to="">Information</NavLink>
             </nav>    
             <div className="carro">
                 <NavLink to="/cart">

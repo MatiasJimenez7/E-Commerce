@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getProducts } from "../../Pelotas";
 import Item from "../CartasProductos/Item";
 import "./ItemList.css"
+import { Firebase } from "../../Firebase/Firebase";
 
 
 
@@ -10,24 +10,34 @@ export default function ItemListContenedor ()  {
     const [pelotas, setPelotas] = useState([])
 
     
-    useEffect(()=>{
-        getProducts().then(
-            datos=>{
-                setPelotas(datos)
-            }
-        )
+    useEffect(() => {
+        Firebase.getAll('Pelotas').then(docs => {
+            
+            const arr = [];
+            docs.forEach(item => {
+            const data = item.data();
+            
+            arr.push(
+                <Item
+                key={item.id}
+                id={item.id}
+                nombre={data.nombre}
+                precio={data.precio}
+                img={data.img}
+                />
+            );
+        });
 
-    },[pelotas])
+        setPelotas(arr);
+        });
+    }, []);
+
 
 
 
     return (
         <div className="gigante">
-            {
-                pelotas.map(elem=>
-                  <Item id={elem.id} nombre={elem.nombre} precio={elem.precio} img={elem.img}/>
-                )
-            }
+            {pelotas}
         </div>
     );
 }

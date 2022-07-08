@@ -1,31 +1,32 @@
 import ItemDetail from "./ItemDetail"
 import React, { useState, useEffect } from 'react';
-import { getProducts } from "../../Pelotas";
 import "./ItemDetail.css"
 import "../AgregarAlCarrito/ItemCount"
 import {NavLink, useParams} from "react-router-dom"
+import { Firebase } from '../../Firebase/Firebase';
 
 export default function ItemDetailConteiner () {
 
-    const [pelota, setPelota] = useState({})
+    const [pelota, setPelota] = useState([])
 
     const {itemid} = useParams();
+    
 
     useEffect(()=>{
-        getProducts().then(
-            pelota=>{
-                setPelota(pelota[itemid])
-                console.log(pelota)
-            }
-        )
+        Firebase.get(`Pelotas/${itemid}`).then(res => {
+        const itemsFirebase = res.data()
+        
+        setPelota(<ItemDetail id={itemsFirebase.id}
+            nombre={itemsFirebase.nombre}
+            precio={itemsFirebase.precio}
+            img={itemsFirebase.img}
+        />)})},[])
 
-    },[pelota])
-
-
+        
 
     return (
         <div>
-            <ItemDetail nombre={pelota.nombre} precio={pelota.precio} img={pelota.img}/>
+            {pelota}
         </div>
     )
 }    

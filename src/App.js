@@ -9,6 +9,7 @@ import Category from "./components/category/Category"
 import Cart from "./components/carro/Cart"
 import CartProvider from "../src/Context/Context"
 import CartWidgets from "./components/CartWidgets/CartWidgets";
+import Payment from "./components/Payment/Payment";
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/balls/:itemid" element={<ItemDetailConteiner/>}/>
         <Route path="/category" element={<Category/>}/>
         <Route path="/cart" element={<Cart></Cart>}/>
+        <Route path="/cart/payment" element={<Payment></Payment>}/>
       </Routes>
       </BrowserRouter>
       </CartProvider>

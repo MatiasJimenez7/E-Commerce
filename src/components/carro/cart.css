@@ -39,6 +39,18 @@
     margin-top: 2rem;
 
 }
+.ggg{
+    display: flex;
+    justify-content: center;
+}
+.ggg button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-decoration: none;
+}
 .botondelcarrito2 {
     display: flex;
     justify-content: center;

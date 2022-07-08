@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/Context';
 import "./cart.css"
 
+
 const Cart = () => {
     
     
@@ -10,7 +11,7 @@ const Cart = () => {
         setCartBalls([])
     } 
 
-    const {cartBalls,setCartBalls,totalItems,totalPrice} = useCart()
+    const {cartBalls,setCartBalls,totalItems,totalPrice,purchaseItems} = useCart()
 
     const removeItem = (cartball) => {
         const dataFiltrada = cartBalls.filter(elem => elem !== cartball)
@@ -44,7 +45,12 @@ const Cart = () => {
                 </div>)}
                 
             </div>
-            <h2 className='eltotal'>Subtotal: ${totalPrice()} ({totalItems()} unidades)<button className='botondelcarrito'>terminar compra</button></h2>
+            <h2 className='eltotal'>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h2>
+            <Link className="ggg" to="/cart/payment">
+                <button className="pagar" onClick={() => purchaseItems()}>Pagar</button>
+            </Link>
+            
+            
             </>
             : 
                 <>

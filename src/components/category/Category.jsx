@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
-import { ballsReds } from '../../Pelotas'
 import Item from '../CartasProductos/Item'
+import { Firebase } from "../../Firebase/Firebase";
 
 
 
@@ -8,23 +8,31 @@ export default function Category() {
 
     const [reds,setReds] = useState([])
 
-    useEffect(()=>{
-            ballsReds().then(
-                datos=>{
-                    setReds(datos)
-                    console.log(reds)
-                }
-            )
-    },[ballsReds])
+    useEffect(() => {
+        Firebase.getAll('Pelotas', {
+            field: "category",
+            condition: "==",
+            value: "red"}).then(docs => {
+                const arr = [];
+                docs.forEach(item => {
+                const data = item.data();
+                arr.push(
+                    <Item
+                    key={item.id}
+                    id={item.id}
+                    nombre={data.nombre}
+                    precio={data.precio}
+                    img={data.img}
+                    />
+                );
+            });
+        setReds(arr);
+        });
+    }, []);
 
     return(
         <div className="gigante">
-            {
-                reds.map(elem=>
-                
-                  <Item id={elem.id} nombre={elem.nombre} precio={elem.precio} img={elem.img}/>
-                )
-            }
+            {reds}
         </div>
     )
 }
