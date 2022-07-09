@@ -1,3 +1,10 @@
+.campo {
+    text-align: center;
+}
+.displayFlex {
+    display: flex;
+    gap: 1rem;
+}
 .eltotal {
     text-align: center;
 }
@@ -9,26 +16,27 @@
     padding: 0.5rem;
     font-weight: 700;
 }
-.contenedorPelotas {
-    border: 1px solid rgb(122, 122, 122);
-    width: auto;
-    height: 22rem;
-    text-align: center;
-    
-    
-}
-.contenedorPelotas img {
-    width: auto;
-    height: 7rem;
 
-}
+
 .contenedorPelotas p {
     color: black;
     font-weight: 700;
 }
+.contenedorPelotas {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.contenedor-pagar-vaciar {
+    margin-top: 0.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    
     gap: 3rem;
     margin-top: 3rem;
     margin: auto 20px;

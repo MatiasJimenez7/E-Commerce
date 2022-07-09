@@ -26,12 +26,12 @@ function Payment() {
                 <div className="hijos-detalle-orden subtotal">Subtotal: ${orderState.totalPrice} | {orderState.totalItems} Unidades</div>
 
                 <div className="detalle">Información del comprador</div>
-                <div className="comprador">{orderState.buyer.name}</div>
-                <div className="comprador">{orderState.buyer.phone}</div>
-                <div className="comprador">{orderState.buyer.email}</div>  
+                <div className="comprador">{orderState.name}</div>
+                <div className="comprador">{orderState.phone}</div>
+                <div className="comprador">{orderState.email}</div>  
             </div>
             <Link to="/">
-                        <button onClick={clearcarrito} className="volver-tienda margin-top">Volver a la tienda</button>
+                <button onClick={clearcarrito} className="volver-tienda margin-top">Volver a la tienda</button>
             </Link>
         </div>
     )

@@ -2,16 +2,12 @@ import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/Context';
 import "./cart.css"
+import OrderForm from "../OrderForm/OrderForm"
 
 
 const Cart = () => {
-    
-    
-    const clearcarrito = () => {
-        setCartBalls([])
-    } 
 
-    const {cartBalls,setCartBalls,totalItems,totalPrice,purchaseItems} = useCart()
+    const {cartBalls,setCartBalls,totalItems,totalPrice,clearcarrito} = useCart()
 
     const removeItem = (cartball) => {
         const dataFiltrada = cartBalls.filter(elem => elem !== cartball)
@@ -31,10 +27,13 @@ const Cart = () => {
             <div className="contenedor">
                 
                 {cartBalls.map(elem=><div  className="contenedorPelotas">
-                    <h2>{elem.nombre}</h2>
-                    <img src={elem.img} alt=""/>
-                    <p>$ {elem.precio}</p>
-                    <h2>{elem.contador} Balls</h2>
+                    <div className='displayFlex'>
+                        <h2>{elem.nombre}</h2>
+                        <h2>|</h2>
+                        <h2>$ {elem.precio}</h2>
+                    </div>
+                    
+                    <h2>Cantidades: {elem.contador} Balls</h2>
                     <div onClick={()=>{removeItem(elem)}} className="svgclear">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -46,9 +45,10 @@ const Cart = () => {
                 
             </div>
             <h2 className='eltotal'>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h2>
-            <Link className="ggg" to="/cart/payment">
-                <button className="pagar" onClick={() => purchaseItems()}>Pagar</button>
-            </Link>
+            <div className="campo">Ingrese sus datos para proceder al pago.</div>
+            <div  className="contenedor-pagar-vaciar">
+                <OrderForm/>
+            </div>
             
             
             </>

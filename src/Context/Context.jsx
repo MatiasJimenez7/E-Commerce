@@ -21,26 +21,46 @@ const CartProvider = (props) => {
     const totalPrice = () => cartBalls.reduce((acum, items) => acum + (items.precio * items.contador), 0)
 
     const newOrder = {
-        buyer: {
-            name: "Jimenez Matias",
-            phone: "+54 9 3412297441",
-            email: "jimenezmatias007@gmail.com"
-        },
         items: [cartBalls],
         date: new Date().toString(),
         totalItems: totalItems(),
         totalPrice: totalPrice(),
         IDOrder: uuidv4(),
     }
-    const [orderState, setOrderState] = useState()
 
-    function purchaseItems() {
-        
-        setOrderState(newOrder)
-    
+
+    const [orderState, setOrderState] = useState({
+        ...newOrder,
+        name: "",
+        email: "",
+        emailConfirm: "",
+        phone: ""
+    })
+
+    const updateDatos = (event) => {
+        event.preventDefault()
+        setOrderState({
+            ...orderState,
+            ...newOrder,
+            [event.target.name] : event.target.value
+        })    
+    }
+
+    const enviarDatos = (event) => {
+        event.preventDefault();
+    }
+
+    function clearcarrito() {
+        setCartBalls([])
+        setOrderState({...newOrder,
+            name: "",
+            email: "",
+            emailConfirm: "",
+            phone: ""
+        })
     }
     return (
-        <CartContext.Provider value={{cartBalls,orderState, purchaseItems, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
+        <CartContext.Provider value={{cartBalls, orderState, clearcarrito, orderState, enviarDatos, updateDatos, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
             {props.children}
         </CartContext.Provider>
     )
