@@ -7,7 +7,7 @@ import OrderForm from "../OrderForm/OrderForm"
 
 const Cart = () => {
 
-    const {cartBalls,setCartBalls,totalItems,totalPrice,clearcarrito} = useCart()
+    const {cartBalls,removeItem,totalItems,totalPrice,clearcarrito} = useCart()
 
     useEffect(()=>{
         console.log(cartBalls)

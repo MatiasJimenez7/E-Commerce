@@ -59,8 +59,13 @@ const CartProvider = (props) => {
             phone: ""
         })
     }
+    const removeItem = (product) => {
+        const dataFiltrada = cartBalls.filter((elem) => elem !== product)
+        setCartBalls(dataFiltrada)
+        
+    }
     return (
-        <CartContext.Provider value={{cartBalls, orderState, clearcarrito, orderState, enviarDatos, updateDatos, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
+        <CartContext.Provider value={{cartBalls,removeItem, orderState, clearcarrito, orderState, enviarDatos, updateDatos, setCartBalls, count, setCount, totalItems,totalPrice, getTotalItems }}>
             {props.children}
         </CartContext.Provider>
     )
