@@ -5,6 +5,8 @@ import "../AgregarAlCarrito/ItemCount"
 import {NavLink, useParams} from "react-router-dom"
 import { Firebase } from '../../Firebase/Firebase';
 
+
+
 export default function ItemDetailConteiner () {
 
     const [pelota, setPelota] = useState([])
@@ -21,9 +23,7 @@ export default function ItemDetailConteiner () {
             precio={itemsFirebase.precio}
             img={itemsFirebase.img}
         />)})},[])
-
-        
-
+    
     return (
         <div>
             {pelota}

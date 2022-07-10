@@ -9,11 +9,6 @@ const Cart = () => {
 
     const {cartBalls,setCartBalls,totalItems,totalPrice,clearcarrito} = useCart()
 
-    const removeItem = (cartball) => {
-        const dataFiltrada = cartBalls.filter(elem => elem !== cartball)
-        setCartBalls(dataFiltrada)
-    }
-
     useEffect(()=>{
         console.log(cartBalls)
     },[cartBalls])
