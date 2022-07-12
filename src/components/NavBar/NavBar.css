@@ -22,7 +22,8 @@ body {
 .gg {
     display: flex;
     justify-content: space-between;
-    background-image: url(../../img/champsss.jpg);
+    background-color: black;
+    
 }
 .carro{
     display: flex;
@@ -63,7 +64,7 @@ body {
     .gg {
         display: flex;
         flex-direction: column;
-        background-image: url(../../img/champsss.jpg);
+        background-image: url(../../img/champions-champions-league-football-uefa-wallpaper-preview.jpg);
     }
     .carro{
         display: flex;

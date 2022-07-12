@@ -22,4 +22,4 @@ npm start
 Para abrirla, diríjase a http://localhost:3000 (por defecto, React usa el puerto 3000. En el caso que ya tenga una aplicación lanzada, este número podría variar)
 
 Sobre mí
-Mi nombre es Matias Jimenez, Tengo 19 años de edad soy desarrollador web Front-end, vivo en la ciudad de Rosario, Santa fe, Argentina y actualmente estoy en el ambiente de la programacion hace ya unos 5 meses!
+Mi nombre es Matias Jimenez, Tengo 19 años de edad soy desarrollador web Front-end, vivo en la ciudad de Rosario, Santa fe, Argentina y actualmente estoy en el ambiente de la programacion hace ya unos 5 meses , actualmente es mi profecion y a lo que me voy a dedicar el resto de mi vida , ya que la paso muy bien!

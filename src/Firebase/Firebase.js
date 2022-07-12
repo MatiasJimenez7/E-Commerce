@@ -16,7 +16,7 @@ import {
 const firebaseConfig = {
     apiKey: "AIzaSyDwnJrXUKhyHdLSrB4ryp6f1iLiZTgdUK0",
     authDomain: "coderhouse-1a11b.firebaseapp.com",
-    projectId: "coderhouse-1a11b",
+    projectId: process.env.REACT_APP_REACT_ENV_PROYECT,
     storageBucket: "coderhouse-1a11b.appspot.com",
     messagingSenderId: "633593706026",
     appId: "1:633593706026:web:4099b9ae611f106b03f553"
