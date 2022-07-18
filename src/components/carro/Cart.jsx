@@ -10,7 +10,7 @@ const Cart = () => {
     const {cartBalls,removeItem,totalItems,totalPrice,clearcarrito} = useCart()
 
     useEffect(()=>{
-        console.log(cartBalls)
+        
     },[cartBalls])
     return(
         <div>

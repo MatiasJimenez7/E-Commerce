@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Item from "../CartasProductos/Item";
 import "./ItemList.css"
 import { Firebase } from "../../Firebase/Firebase";
-import { useParams } from "react-router-dom";
+
 
 
 

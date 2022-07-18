@@ -2,7 +2,7 @@ import ItemDetail from "./ItemDetail"
 import React, { useState, useEffect } from 'react';
 import "./ItemDetail.css"
 import "../AgregarAlCarrito/ItemCount"
-import {NavLink, useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import { Firebase } from '../../Firebase/Firebase';
 
 

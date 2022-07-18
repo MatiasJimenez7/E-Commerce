@@ -1,7 +1,7 @@
-import { useState,useEffect } from "react";
+import {useEffect } from "react";
 import ItemCount from "../AgregarAlCarrito/ItemCount";
 import {Link} from "react-router-dom"
-import Cart from "../carro/Cart";
+
 import {useCart} from "../../Context/Context"
  
 
