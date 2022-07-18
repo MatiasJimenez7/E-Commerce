@@ -18,7 +18,7 @@ const CartProvider = (props) => {
     const [count, setCount] = useState(false)
 
     const totalItems = () => cartBalls.reduce((acum, items) => acum + items.contador, 0)
-    const totalPrice = () => cartBalls.reduce((acum, items) => acum + (items.precio * items.contador), 0)
+    const totalPrice = () => cartBalls.reduce((acum, items) => acum + (items.precio), 0)
 
     const newOrder = {
         items: [cartBalls],
